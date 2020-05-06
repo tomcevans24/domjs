@@ -1,6 +1,7 @@
 const input = document.getElementById('input');
 const button = document.getElementById('submit');
 /*add new const below*/
+const removeBtn = document.getElementById('remove');
 
 /*from previous ex*/
 button.addEventListener('click', () => {
@@ -15,3 +16,10 @@ button.addEventListener('click', () => {
 })
 
 /*New code below*/
+removeBtn.addEventListener(`click`,() => {
+
+    let lastItem = document.querySelector(`li:last-child`);
+    let list = document.getElementsByTagName('ul')[0];
+
+    list.removeChild(lastItem);
+})
